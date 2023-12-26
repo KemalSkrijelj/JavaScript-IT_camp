@@ -30,4 +30,4 @@ var osoba = {
 function test (e) {
 console.log(e)
 }
-test(3)
+test(10)
