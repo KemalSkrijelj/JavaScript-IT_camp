@@ -54,14 +54,34 @@ let string ="2";
  
 let mojNovcanik = 100;
 
-const kafa = 10;
-const sok = 20;
-const cigare = 250;
+// const kafa = 10;
+// const sok = 20;
+// const cigare = 250;
 
-console.log (mojNovcanik >= kafa);
-console.log (mojNovcanik - kafa);
-console.log (mojNovcanik >= (sok + kafa));
-console.log (mojNovcanik - (sok + kafa));
-console.log (mojNovcanik >= cigare) | 
-console.log ("Ostalo mi je:" + (mojNovcanik - (sok + kafa))) ;
-console.log ("Da bi kupio cigare nedostaje mi:" + (cigare - mojNovcanik));
+// console.log (mojNovcanik >= kafa);
+// console.log (mojNovcanik - kafa);
+// console.log (mojNovcanik >= (sok + kafa));
+// console.log (mojNovcanik - (sok + kafa));
+// console.log (mojNovcanik >= cigare) | 
+// console.log ("Ostalo mi je:" + (mojNovcanik - (sok + kafa))) ;
+// console.log ("Da bi kupio cigare nedostaje mi:" + (cigare - mojNovcanik));
+
+
+// let kemal = prompt("Koliko ce kemal da ima para....");
+// const staZelisKupiti = prompt("Mozes kupiti 1.cokolada , 2.cigare, 3.sok").toLowerCase();
+// console.log(typeof kemal, "gore typeof od kemal")
+const staZelisKupiti = prompt("Sta cete kupiti?");
+
+switch(staZelisKupiti){
+    case "cokolada":
+    console.log(`Kupio si ${staZelisKupiti}`);
+      break;
+    case "sok":
+    console.log(`Kupio si ${staZelisKupiti}`);
+      break;
+    case "cigare":
+    console.log(`Kupio si ${staZelisKupiti}`);
+      break;
+    default:
+    console.log("Odustao si nisi hteo nista da kupis...");
+}
