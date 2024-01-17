@@ -27,5 +27,20 @@
     password = prompt("Unesi password")
  }
 
- console.log(`User je ${username}`)
- console.log(`Pass je ${password}`)
+ alert("Uspesno ste se ulogovali")
+
+
+// window.location.replace("file:///C:/Users/computer/OneDrive/Desktop/JavaScript-IT_camp/Calculator-prompt/index.html")
+
+
+//1.16.24- domaci
+// treba da se ispise 1,5,9
+
+const arrDiagonala = [[1,2,3],[4,5,6],[7,8,9]]
+const newarrDiagonala = []
+let j = 0
+for (let i = 0; i < arrDiagonala.length; i++) {
+newarrDiagonala.push(arrDiagonala[i][j])
+j++
+}  
+console.log(newarrDiagonala)
