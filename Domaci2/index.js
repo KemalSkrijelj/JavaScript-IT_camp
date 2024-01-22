@@ -16,18 +16,18 @@
 
 //1.16.24- domaci
 
-  let username = ""
+//   let username = ""
   
-  while(username !== "kemal"){
-    username = prompt("Unesi username")   
-  }
-  let password = ""
+//   while(username !== "kemal"){
+//     username = prompt("Unesi username")   
+//   }
+//   let password = ""
   
-  while(password !== "kemal22"){
-    password = prompt("Unesi password")
- }
+//   while(password !== "kemal22"){
+//     password = prompt("Unesi password")
+//  }
 
- alert("Uspesno ste se ulogovali")
+//  alert("Uspesno ste se ulogovali")
 
 
 // window.location.replace("file:///C:/Users/computer/OneDrive/Desktop/JavaScript-IT_camp/Calculator-prompt/index.html")
@@ -44,3 +44,23 @@ newarrDiagonala.push(arrDiagonala[i][j])
 j++
 }  
 console.log(newarrDiagonala)
+
+
+//domaci 1.12.24
+//  vi na osnovu tog broja n treba da uradite spratove zvezdica, pa na primer ako korisnik unese broj 3 onda vas output treba da bude 
+// *
+// **
+// ***
+
+
+let num;
+let a = ""
+
+while (isNaN(num)) {
+ num = prompt("unesi br")
+//  console.log(Number(num))
+} 
+for (let i = 0; i < num; i++) {
+ a+="*"
+ console.log(a)
+}
