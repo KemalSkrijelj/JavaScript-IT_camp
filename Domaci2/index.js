@@ -52,15 +52,32 @@ console.log(newarrDiagonala)
 // **
 // ***
 
+// let num;
+// let a = ""
 
-let num;
-let a = ""
+// while (isNaN(num)) {
+//  num = prompt("unesi br")
+// } 
+// for (let i = 0; i < num; i++) {
+//  a+="*"
+//  console.log(a)
+// }
 
-while (isNaN(num)) {
- num = prompt("unesi br")
-//  console.log(Number(num))
-} 
-for (let i = 0; i < num; i++) {
- a+="*"
- console.log(a)
+
+//domaci 1.24.24
+//treba da napravimo drvo od zvezdica
+//npr ovako
+//   *
+//  ***
+// ***** 
+
+let nekiBr ;
+
+while(isNaN(nekiBr)){
+  nekiBr = prompt("Unesi broj za kreiranje jelkice")
 }
+
+for (let i = 1; i <= nekiBr; i++) {
+console.log((" ").repeat(nekiBr - i) + ("*").repeat(2*i-1))
+}
+
