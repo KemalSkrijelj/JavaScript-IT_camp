@@ -73,11 +73,51 @@ console.log(newarrDiagonala)
 
 let nekiBr ;
 
-while(isNaN(nekiBr)){
-  nekiBr = prompt("Unesi broj za kreiranje jelkice")
-}
+// while(isNaN(nekiBr)){
+//   nekiBr = prompt("Unesi broj za kreiranje jelkice")
+// }
 
 for (let i = 1; i <= nekiBr; i++) {
 console.log((" ").repeat(nekiBr - i) + ("*").repeat(2*i-1))
 }
 
+console.log('-------------------------------------')
+//domaci novi
+//provera koliko puta se neki element nalazi u nizu
+
+let niz = [1,2,3,4,4,5,6,7,7,4,1,2,4,5,5,4,3,2,1,3,1,3,3,1,3,4,5]
+
+for (let i = 0; i < niz.length; i++) {
+  if (niz[i] === 1) {
+    console.log(niz[i])
+  }
+}
+for (let j = 0; j < niz.length; j++) {
+  if (niz[j] === 2) {
+    console.log(niz[j])
+  }
+}
+console.log('--------------------')
+///////////////////////////
+let noviNiz = [1, 3, 7, 3, 3, 2, 1]
+
+for (let i = 0; i < noviNiz.length; i++) {
+  if (noviNiz[i] === 1) {
+    console.log(noviNiz[i])
+  }
+}
+for (let j = 0; j < noviNiz.length; j++) {
+  if (noviNiz[j] === 3) {
+    console.log(noviNiz[j])
+  }
+}
+for (let y = 0; y < noviNiz.length; y++) {
+  if (noviNiz[y] === 2) {
+    console.log(noviNiz[y])
+  }
+}
+for (let k = 0; k < noviNiz.length; k++) {
+  if (noviNiz[k] === 7) {
+    console.log(noviNiz[k])
+  }
+}
