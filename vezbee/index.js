@@ -215,3 +215,25 @@ const zadatakZadaca2 =numbers.map((el, i, arr) => {
 
 console.log(zadatakZadaca2)
 
+
+const vasZadatakJe = [1,2,3,4,5,6,7,8,9,10]
+const vasZadatakPrimer = vasZadatakJe.map((el, index) => {
+  if (index % 2 === 0) {
+    return el + 1;
+  }else {
+    return el - 1;
+  }
+})
+console.log("Svi parni +1, neparni - 1:")
+console.log(vasZadatakPrimer)
+
+///////////////////
+let novaVarijabla = []
+
+function mojCustomMap(vasZadatakJe) {
+  for (let i = 0; i < vasZadatakJe.length; i++) {
+  novaVarijabla.push(vasZadatakJe[i] + 1)
+  }
+}
+mojCustomMap(vasZadatakJe)
+console.log(novaVarijabla)
