@@ -121,3 +121,37 @@ for (let k = 0; k < noviNiz.length; k++) {
     console.log(noviNiz[k])
   }
 }
+//domaci 1.31.24
+//'The Quick Brown Fox' the output should be "tHE qUICK bROWN fOX"
+
+let nova = 'The Quick Brown Fox'
+let uradjeno = nova
+              .replace("The", "tHe")
+              .replace("Quick", "qUCIK")  
+              .replace("Brown", "bROWN")  
+              .replace("Fox", "fOX")
+              console.log(`Iz "${nova}" prebaceno u "${uradjeno}"`)  
+
+//domaci 2
+//remove elements
+//Expected result : [15, -22, 47]
+const array1 =  ["NaN", 0, 15, "false", -22, '',"undefined", 47, "null"]
+const array2 = []
+for (let i = 0; i < array1.length; i++) {
+  if (array1[i] === "NaN" ) {
+    continue;
+  }if (array1[i] === 0 ) {
+    continue;
+  }if (array1[i] === "false" ) {
+    continue;
+  }if (array1[i] === '' ) {
+    continue;
+  }if (array1[i] === "undefined" ) {
+    continue;
+  }if (array1[i] === "null" ) {
+    continue;
+  }else{
+    array2.push(array1[i])
+  }
+}console.log(array2);
+
