@@ -237,3 +237,66 @@ function mojCustomMap(vasZadatakJe) {
 }
 mojCustomMap(vasZadatakJe)
 console.log(novaVarijabla)
+//////////////
+const kemal = [1,2,3,4,5,67,8,9,0,10,11,12,32,14]
+const veljko = [2,3,4,5,6,7,8,12,32]
+
+let kemalVeljko  = [];
+
+for (let i = 0; i < kemal.length; i++) {
+  kemalVeljko.push(kemal[i])
+}
+for (let j = 0; j < veljko.length; j++) {
+  kemalVeljko.push(veljko[j])
+}
+
+
+/////concat()- spaja dva arr
+kemalVeljko = kemal.concat(veljko)
+
+console.log(kemalVeljko)
+
+const svi = [1,2,3421,321321,321321,12,213122312]
+
+const samoNeparni = []
+
+for (let i = 0; i < svi.length; i++) {
+ if (svi[i] % 2 === 0) {
+  continue;
+ }else{
+  samoNeparni.push(svi[i])
+ } 
+}
+console.log(samoNeparni)
+//////////////
+const nekiObj = [
+ {ime:"Kemal", grad: "Np"},
+ {ime:"Mihailo", grad: "Bg"},
+ {ime:"Amir", grad: "Np"}
+]
+
+const nekiObjFilter = nekiObj.filter(function (e) {
+  return e. grad == "Np"
+});
+console.log(nekiObjFilter)
+
+const nekiArr = [221,2,3,32,3,23,12,3,213,21,3,12323123,32123]
+const nekiArrFilter = nekiArr.filter(function(e){
+  if (e % 2 === 0) {
+    return e
+  }
+})
+console.log(nekiArrFilter)
+console.log('-------------')
+/////////////////
+ const imateImamo = [[1,2,3,32],[23232,323232]]
+const imateImamo2 = []
+for (let i = 0; i < imateImamo.length; i++) {
+for (let j = 0; j < imateImamo[i].length; j++) {
+imateImamo2.push(imateImamo[i][j])  
+}
+}
+console.log(imateImamo2)
+
+const flex = imateImamo.flat()
+console.log(flex)
