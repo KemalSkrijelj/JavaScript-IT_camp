@@ -300,3 +300,51 @@ console.log(imateImamo2)
 
 const flex = imateImamo.flat()
 console.log(flex)
+//////////////////////
+// const videos = [
+//   "Pranking my sister, is she okey(gone wrong",
+//   "how to javascript",
+//   "html tutorial",
+//   "learning the piano",
+//   "html basics",
+//   "java",
+//   "programming",
+//   "ui/ux"
+// ];
+// videos.forEach(function(video) {
+//   console.log("run")
+//  console.log(video)
+// });
+
+const names = ["k","e","m","a","l"]
+
+names.forEach(function(name) {
+  console.log(name)
+})
+
+const num = [1,2,3,4,5,6,7,8]
+
+num.forEach(function(el){
+console.log(el)
+})
+///////////////
+let br = [10,11,12,13,14,15,16,17,18,19]
+let obrnutiBr = []
+for (let i = br.length - 1; i > 0; i--) {
+  obrnutiBr.push(br[i])
+}
+console.log(obrnutiBr)
+
+//Objects
+ 
+let imeObject= "ffffffffffffffff"
+while(imeObject.length > 15) {
+  imeObject = prompt("unesi ime!")
+}
+let prezimeObject = prompt("Unesi prezime")
+let godineObject;
+while (isNaN(godineObject)) {
+  godineObject = prompt('Unesi godine')
+}
+
+console.log(`{ime:${imeObject},prezime:${prezimeObject},godine:${godineObject}}`)
