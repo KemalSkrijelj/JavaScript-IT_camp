@@ -100,13 +100,13 @@ console.log(rez)
 //   }
 
 ////////////////
-  const arr = [1,2,3,4,5,6,7]
-  let reverseArr = [];
+  // const arr = [1,2,3,4,5,6,7]
+  // let reverseArr = [];
   
-  for (let i = arr.length - 1; i >= 0; i--) {
-   reverseArr.push(arr[i])
-  }
-  console.log(reverseArr)
+  // for (let i = arr.length - 1; i >= 0; i--) {
+  //  reverseArr.push(arr[i])
+  // }
+  // console.log(reverseArr)
 
 // /////
 // const arr1 = [1,2,3,4,5,6,7]
@@ -337,14 +337,59 @@ console.log(obrnutiBr)
 
 //Objects
  
-let imeObject= "ffffffffffffffff"
-while(imeObject.length > 15) {
-  imeObject = prompt("unesi ime!")
-}
-let prezimeObject = prompt("Unesi prezime")
-let godineObject;
-while (isNaN(godineObject)) {
-  godineObject = prompt('Unesi godine')
-}
+// let imeObject= "ffffffffffffffff"
+// while(imeObject.length > 15) {
+//   imeObject = prompt("unesi ime!")
+// }
+// let prezimeObject = prompt("Unesi prezime")
+// let godineObject;
+// while (isNaN(godineObject)) {
+//   godineObject = prompt('Unesi godine')
+// }
 
-console.log(`{ime:${imeObject},prezime:${prezimeObject},godine:${godineObject}}`)
+// console.log(`{ime:${imeObject},prezime:${prezimeObject},godine:${godineObject}}`)
+
+
+// const user = {
+//   korisnicko_ime: "",
+//   password:"",
+//   email: ""
+// }
+// while (user.korisnicko_ime.length < 3) {
+//   user.korisnicko_ime = prompt("Unesite vase korisnicko ime!")
+// }
+// while (user.password.length < 3) {
+//   user.password = prompt("Unesite password!")
+// }
+
+// while (!user.email.includes("@") &&!user.email.includes(".")) {
+//   user.email = prompt("unesi email")
+// }
+// alert(`Uspesno ste se registovali sa podacima:
+//        Korsnicko Ime: ${user.korisnicko_ime},
+//        Password: ${user.password},
+//        Email: ${user.email}`)
+
+//////////////////
+console.log("-------------")
+
+const arr = [1,23232,122233,1,123321123,1,23,23,1]
+const noviobjekat = {
+
+}
+// const arrBezDupli = new Set(arr) // Izbacuje duplikate iz arraya
+// console.log(arrBezDupli);
+brojac={}
+
+
+arr.forEach((el) => {
+    if (!noviobjekat.hasOwnProperty(el)){
+        noviobjekat[el] = el
+
+    }
+    brojac[el] = (brojac[el] || 0) + 1;
+
+})
+console.log('------------------')
+console.log(noviobjekat);
+console.log(brojac);
