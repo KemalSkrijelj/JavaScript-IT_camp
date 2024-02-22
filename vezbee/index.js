@@ -393,3 +393,105 @@ arr.forEach((el) => {
 console.log('------------------')
 console.log(noviobjekat);
 console.log(brojac);
+// Unutar postojeceg objekta dodati nova svojstva:
+// 1. trenutnaBrzina: 0,
+// 2. maksimalnaBrzina: 260,
+// 3. povecanjeBrzine: (metoda koja uzima jedan argument),
+// 4. smanjenjeBrzine: (metoda koja uzima jedan argument),
+// 5. koci: (metoda koja dodeljuje 0 za vrednost trenutne brzine).
+ 
+const myCar = {
+  id: 1,
+  marka: "Audi",
+  model: "a4",
+  boja: "Crvena",
+  pogon: "prednji",
+  menjac: "automatski",
+  kontakt: ["0622222", "02033322"],
+  servis: {
+    datum: "04,maj",
+    km: 23000,
+    serviser: "Pasovic",
+  },
+  udaran: true,
+};
+myCar.trenutnaBrzina = 0
+myCar.maksimalnaBrzina = 260
+
+
+myCar.povecanjeBrzine = function (ubrzanje) {
+  if (this.trenutnaBrzina + ubrzanje > this.maksimalnaBrzina) {
+    this.trenutnaBrzina = this.maksimalnaBrzina
+  }else {
+    this.trenutnaBrzina += ubrzanje
+  }
+}
+myCar.smanjenjeBrzine = function (smanjenje) {
+  if (this.trenutnaBrzina - smanjenje < 0) {
+    this.trenutnaBrzina = 0
+  }else {
+  this.trenutnaBrzina -= smanjenje
+  }
+}
+myCar.koci = function () {
+  this.trenutnaBrzina = 0
+}
+myCar.povecanjeBrzine(50);
+console.log(myCar.trenutnaBrzina)
+
+myCar.smanjenjeBrzine(30)
+console.log(myCar.trenutnaBrzina)
+
+myCar.koci()
+console.log(myCar.trenutnaBrzina)
+
+myCar.smanjenjeBrzine(30)
+console.log(myCar.trenutnaBrzina)
+
+console.log("-------------")
+/////////////////////////////////////////////////
+
+class Osoba {
+  constructor(ime,prezime,godiste){
+    this.ime = ime ,
+    this.prezime = prezime  ,
+    this.godiste = godiste 
+  }
+  
+getStarost(){
+let datumRodjenja = new Date();
+let age  = datumRodjenja.getFullYear() - this.godiste;
+let numberOfMonths = 1
+let month = datumRodjenja.getMonth()+numberOfMonths;
+if (month === 2) {
+  console.log("Februar")
+}
+let day = datumRodjenja.getDay()
+switch (day) {
+  case 1:
+  console.log("Monday")
+    break;
+  case 2:
+  console.log("Tuesday")
+    break;
+  case 3:
+  console.log("Wednesday")
+    break;
+  case 4:
+  console.log("Thursday")
+    break;
+  case 5:
+  console.log("Friday")
+    break;
+  case 6:
+  console.log("Saturday")
+    break;
+  case 7:
+  console.log("Sunday")
+    break;    
+}
+  return age
+ }
+}
+let kemalOsoba = new Osoba ("Kemal","Skjelj", 2005)
+console.log(kemalOsoba.getStarost())
