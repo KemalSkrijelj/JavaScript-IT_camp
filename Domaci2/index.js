@@ -36,122 +36,154 @@
 //1.16.24- domaci
 // treba da se ispise 1,5,9
 
-const arrDiagonala = [[1,2,3],[4,5,6],[7,8,9]]
-const newarrDiagonala = []
-let j = 0
-for (let i = 0; i < arrDiagonala.length; i++) {
-newarrDiagonala.push(arrDiagonala[i][j])
-j++
-}  
-console.log(newarrDiagonala)
+// const arrDiagonala = [[1,2,3],[4,5,6],[7,8,9]]
+// const newarrDiagonala = []
+// let j = 0
+// for (let i = 0; i < arrDiagonala.length; i++) {
+// newarrDiagonala.push(arrDiagonala[i][j])
+// j++
+// }  
+// console.log(newarrDiagonala)
 
 
-//domaci 1.12.24
-//  vi na osnovu tog broja n treba da uradite spratove zvezdica, pa na primer ako korisnik unese broj 3 onda vas output treba da bude 
-// *
-// **
-// ***
+// //domaci 1.12.24
+// //  vi na osnovu tog broja n treba da uradite spratove zvezdica, pa na primer ako korisnik unese broj 3 onda vas output treba da bude 
+// // *
+// // **
+// // ***
 
-// let num;
-// let a = ""
+// // let num;
+// // let a = ""
 
-// while (isNaN(num)) {
-//  num = prompt("unesi br")
-// } 
-// for (let i = 0; i < num; i++) {
-//  a+="*"
-//  console.log(a)
+// // while (isNaN(num)) {
+// //  num = prompt("unesi br")
+// // } 
+// // for (let i = 0; i < num; i++) {
+// //  a+="*"
+// //  console.log(a)
+// // }
+
+
+// //domaci 1.24.24
+// //treba da napravimo drvo od zvezdica
+// //npr ovako
+// //   *
+// //  ***
+// // ***** 
+
+// let nekiBr ;
+
+// // while(isNaN(nekiBr)){
+// //   nekiBr = prompt("Unesi broj za kreiranje jelkice")
+// // }
+
+// for (let i = 1; i <= nekiBr; i++) {
+// console.log((" ").repeat(nekiBr - i) + ("*").repeat(2*i-1))
 // }
 
+// console.log('-------------------------------------')
+// //domaci novi
+// //provera koliko puta se neki element nalazi u nizu
 
-//domaci 1.24.24
-//treba da napravimo drvo od zvezdica
-//npr ovako
-//   *
-//  ***
-// ***** 
+// let niz = [1,2,3,4,4,5,6,7,7,4,1,2,4,5,5,4,3,2,1,3,1,3,3,1,3,4,5]
 
-let nekiBr ;
+// for (let i = 0; i < niz.length; i++) {
+//   if (niz[i] === 1) {
+//     console.log(niz[i])
+//   }
+// }
+// for (let j = 0; j < niz.length; j++) {
+//   if (niz[j] === 2) {
+//     console.log(niz[j])
+//   }
+// }
+// console.log('--------------------')
+// ///////////////////////////
+// let noviNiz = [1, 3, 7, 3, 3, 2, 1]
 
-// while(isNaN(nekiBr)){
-//   nekiBr = prompt("Unesi broj za kreiranje jelkice")
+// for (let i = 0; i < noviNiz.length; i++) {
+//   if (noviNiz[i] === 1) {
+//     console.log(noviNiz[i])
+//   }
+// }
+// for (let j = 0; j < noviNiz.length; j++) {
+//   if (noviNiz[j] === 3) {
+//     console.log(noviNiz[j])
+//   }
+// }
+// for (let y = 0; y < noviNiz.length; y++) {
+//   if (noviNiz[y] === 2) {
+//     console.log(noviNiz[y])
+//   }
+// }
+// for (let k = 0; k < noviNiz.length; k++) {
+//   if (noviNiz[k] === 7) {
+//     console.log(noviNiz[k])
+//   }
+// }
+// //domaci 1.31.24
+// //'The Quick Brown Fox' the output should be "tHE qUICK bROWN fOX"
+
+// let nova = 'The Quick Brown Fox'
+// let uradjeno = nova
+//               .replace("The", "tHe")
+//               .replace("Quick", "qUCIK")  
+//               .replace("Brown", "bROWN")  
+//               .replace("Fox", "fOX")
+//               console.log(`Iz "${nova}" prebaceno u "${uradjeno}"`)  
+
+// //domaci 2
+// //remove elements
+// //Expected result : [15, -22, 47]
+// const array1 =  ["NaN", 0, 15, "false", -22, '',"undefined", 47, "null"]
+// const array2 = []
+// for (let i = 0; i < array1.length; i++) {
+//   if (array1[i] === "NaN" ) {
+//     continue;
+//   }if (array1[i] === 0 ) {
+//     continue;
+//   }if (array1[i] === "false" ) {
+//     continue;
+//   }if (array1[i] === '' ) {
+//     continue;
+//   }if (array1[i] === "undefined" ) {
+//     continue;
+//   }if (array1[i] === "null" ) {
+//     continue;
+//   }else{
+//     array2.push(array1[i])
+//   }
+// }console.log(array2);
+
+// console.log("------------")
+// //Domaci 2.8.22
+// let imeObject;
+// while(typeof(imeObject) !== "string" && imeObject.length > 3) {
+//   imeObject = prompt("unesi ime!")
+// }
+// let prezimeObject = prompt("Unesi prezime")
+// let godineObject;
+// while (isNaN(godineObject)) {
+//   godineObject = prompt('Unesi godine')
 // }
 
-for (let i = 1; i <= nekiBr; i++) {
-console.log((" ").repeat(nekiBr - i) + ("*").repeat(2*i-1))
-}
+// console.log(`{ime:${imeObject},prezime:${prezimeObject},godine:${godineObject}}`)
+//////////////////////
 
-console.log('-------------------------------------')
-//domaci novi
-//provera koliko puta se neki element nalazi u nizu
+today = new Date()
+past = new Date(2005,9,10) //Js racuna mesece od 0
 
-let niz = [1,2,3,4,4,5,6,7,7,4,1,2,4,5,5,4,3,2,1,3,1,3,3,1,3,4,5]
 
-for (let i = 0; i < niz.length; i++) {
-  if (niz[i] === 1) {
-    console.log(niz[i])
-  }
-}
-for (let j = 0; j < niz.length; j++) {
-  if (niz[j] === 2) {
-    console.log(niz[j])
-  }
-}
-console.log('--------------------')
-///////////////////////////
-let noviNiz = [1, 3, 7, 3, 3, 2, 1]
+function calcDate(date1,date2) {
+    const diff = Math.floor(date1.getTime() - date2.getTime());
+    const day = 1000 * 60 * 60 * 24;
 
-for (let i = 0; i < noviNiz.length; i++) {
-  if (noviNiz[i] === 1) {
-    console.log(noviNiz[i])
-  }
-}
-for (let j = 0; j < noviNiz.length; j++) {
-  if (noviNiz[j] === 3) {
-    console.log(noviNiz[j])
-  }
-}
-for (let y = 0; y < noviNiz.length; y++) {
-  if (noviNiz[y] === 2) {
-    console.log(noviNiz[y])
-  }
-}
-for (let k = 0; k < noviNiz.length; k++) {
-  if (noviNiz[k] === 7) {
-    console.log(noviNiz[k])
-  }
-}
-//domaci 1.31.24
-//'The Quick Brown Fox' the output should be "tHE qUICK bROWN fOX"
+    const days = Math.floor(diff/day);
+    const months = Math.floor(days/31);
+    const years = Math.floor(months/12);
 
-let nova = 'The Quick Brown Fox'
-let uradjeno = nova
-              .replace("The", "tHe")
-              .replace("Quick", "qUCIK")  
-              .replace("Brown", "bROWN")  
-              .replace("Fox", "fOX")
-              console.log(`Iz "${nova}" prebaceno u "${uradjeno}"`)  
+    const message = `${years}years   ${months}months  ${days}days `
 
-//domaci 2
-//remove elements
-//Expected result : [15, -22, 47]
-const array1 =  ["NaN", 0, 15, "false", -22, '',"undefined", 47, "null"]
-const array2 = []
-for (let i = 0; i < array1.length; i++) {
-  if (array1[i] === "NaN" ) {
-    continue;
-  }if (array1[i] === 0 ) {
-    continue;
-  }if (array1[i] === "false" ) {
-    continue;
-  }if (array1[i] === '' ) {
-    continue;
-  }if (array1[i] === "undefined" ) {
-    continue;
-  }if (array1[i] === "null" ) {
-    continue;
-  }else{
-    array2.push(array1[i])
-  }
-}console.log(array2);
-
+    return message
+    }
+console.log(calcDate(today,past)) 
