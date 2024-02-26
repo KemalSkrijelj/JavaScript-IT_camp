@@ -495,3 +495,101 @@ switch (day) {
 }
 let kemalOsoba = new Osoba ("Kemal","Skjelj", 2005)
 console.log(kemalOsoba.getStarost())
+
+
+let godinaRodjenja;
+let mesecRodjenja;
+let danRodjenja;
+
+const tdy = new Date()
+const myBrth = new Date(2005,9,10)
+
+function cal(one,two) {
+  const diff = Math.floor(one.getTime() - two.getTime());
+  const day = 1000 * 60 * 60 * 24;
+
+  const days = Math.floor(diff/day)
+  const months = Math.floor(days/31)
+  const years = Math.floor(months/12)
+
+  let clg = `star sam ${years}, dana ${days} meseci ${months}`
+  return clg
+}
+
+console.log(cal(tdy,myBrth)) 
+/////////////////////
+class Covek {
+ constructor(ime,prezime,godine){
+  this.ime = ime,
+  this.prezime = prezime,
+  this.godine = godine
+ }
+ imePrezime(){
+  console.log(`Vase ime i prezime je: ${this.ime} ${this.prezime}`)
+ }
+}
+let kemalCovek = new Covek("Kemal","Skrijelj", 18)
+kemalCovek.imePrezime()
+
+//STATIC
+class Kalkulator {
+  static izracunajAiB(a,b){
+  console.log(a+b)
+  }
+  static pomnoziAiB(a,b){
+  console.log(a*b)
+  }
+}
+Kalkulator.izracunajAiB(5,5)
+console.log("---------------------")
+
+// let daLiZeliteKorisnike = prompt("Unesi korisnike")
+
+// let unesiIme = prompt("Unesi ime")
+// let unesiPrezime = prompt("Unesi prezime")
+// let unesiEmail = prompt("Unesi Email")
+// let unesiGodine;
+// while(isNaN(unesiGodine)){
+//   unesiGodine = prompt("unesi godine")
+// }
+
+class Acc {
+  constructor(ime,prezime,email,godine){
+  this.ime = ime
+  this.prezime = prezime
+  this.email = email
+  this.godine = godine
+  }
+
+}
+let lista = []
+
+for (let i = 0; i < 3; i++) {
+let unesiIme = prompt("Unesi ime")
+let unesiPrezime = prompt("Unesi prezime")
+let unesiEmail = prompt("Unesi Email")
+let unesiGodine;
+while(isNaN(unesiGodine)){
+  unesiGodine = prompt("unesi godine")
+ } 
+ lista.push(new Acc(unesiIme,unesiPrezime,unesiEmail,unesiGodine))
+}
+
+let daLiZeliteKorisnike = prompt("Da li zelite da unesete jos korisnika")
+
+if (daLiZeliteKorisnike === "da") {
+  let unesiIme = prompt("Unesi ime")
+let unesiPrezime = prompt("Unesi prezime")
+let unesiEmail = prompt("Unesi Email")
+let unesiGodine;
+while(isNaN(unesiGodine)){
+  unesiGodine = prompt("unesi godine")
+ } 
+ lista.push(new Acc(unesiIme,unesiPrezime,unesiEmail,unesiGodine))
+}else {
+  let kojiKorisnik = prompt("Od kojeg korisnika zelite info")
+  console.log(`IME:${lista[kojiKorisnik].ime},
+   PREZIME:${lista[kojiKorisnik].prezime},
+   EMAIL: ${lista[kojiKorisnik].email},
+   GODINE: ${lista[kojiKorisnik].godine}`)
+}
