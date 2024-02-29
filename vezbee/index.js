@@ -553,43 +553,112 @@ console.log("---------------------")
 //   unesiGodine = prompt("unesi godine")
 // }
 
-class Acc {
-  constructor(ime,prezime,email,godine){
-  this.ime = ime
-  this.prezime = prezime
-  this.email = email
-  this.godine = godine
+// class Acc {
+//   constructor(ime,prezime,email,godine){
+//   this.ime = ime
+//   this.prezime = prezime
+//   this.email = email
+//   this.godine = godine
+//   }
+
+// }
+// let lista = []
+
+// for (let i = 0; i < 3; i++) {
+// let unesiIme = prompt("Unesi ime")
+// let unesiPrezime = prompt("Unesi prezime")
+// let unesiEmail = prompt("Unesi Email")
+// let unesiGodine;
+// while(isNaN(unesiGodine)){
+//   unesiGodine = prompt("unesi godine")
+//  } 
+//  lista.push(new Acc(unesiIme,unesiPrezime,unesiEmail,unesiGodine))
+// }
+
+// let daLiZeliteKorisnike = prompt("Da li zelite da unesete jos korisnika")
+
+// if (daLiZeliteKorisnike === "da") {
+//   let unesiIme = prompt("Unesi ime")
+// let unesiPrezime = prompt("Unesi prezime")
+// let unesiEmail = prompt("Unesi Email")
+// let unesiGodine;
+// while(isNaN(unesiGodine)){
+//   unesiGodine = prompt("unesi godine")
+//  } 
+//  lista.push(new Acc(unesiIme,unesiPrezime,unesiEmail,unesiGodine))
+// }else {
+//   let kojiKorisnik = prompt("Od kojeg korisnika zelite info")
+//   console.log(`
+//    IME: ${lista[kojiKorisnik].ime},
+//    PREZIME: ${lista[kojiKorisnik].prezime},
+//    EMAIL: ${lista[kojiKorisnik].email},
+//    GODINE: ${lista[kojiKorisnik].godine}`)
+// }
+
+
+class Osobaa {
+  constructor(ime,prezime,godine){
+    this.ime = ime,
+    this.prezime = prezime,
+    this.godine = godine
   }
-
 }
-let lista = []
-
-for (let i = 0; i < 3; i++) {
-let unesiIme = prompt("Unesi ime")
-let unesiPrezime = prompt("Unesi prezime")
-let unesiEmail = prompt("Unesi Email")
-let unesiGodine;
-while(isNaN(unesiGodine)){
-  unesiGodine = prompt("unesi godine")
- } 
- lista.push(new Acc(unesiIme,unesiPrezime,unesiEmail,unesiGodine))
+class Ucenik extends Osobaa {
+  constructor(skola,ime,prezime,godine){
+    super(ime,prezime,godine)
+    this.skola = skola
+  }
+  informacije(){
+    console.log(this.godine,this.ime,this.prezime,this.skola)
+  }
 }
 
-let daLiZeliteKorisnike = prompt("Da li zelite da unesete jos korisnika")
+const kemalNovi = new Ucenik("Gimnazija","kemal","Skrijelj","18")
+console.log(kemalNovi)
 
-if (daLiZeliteKorisnike === "da") {
-  let unesiIme = prompt("Unesi ime")
-let unesiPrezime = prompt("Unesi prezime")
-let unesiEmail = prompt("Unesi Email")
-let unesiGodine;
-while(isNaN(unesiGodine)){
-  unesiGodine = prompt("unesi godine")
- } 
- lista.push(new Acc(unesiIme,unesiPrezime,unesiEmail,unesiGodine))
-}else {
-  let kojiKorisnik = prompt("Od kojeg korisnika zelite info")
-  console.log(`IME:${lista[kojiKorisnik].ime},
-   PREZIME:${lista[kojiKorisnik].prezime},
-   EMAIL: ${lista[kojiKorisnik].email},
-   GODINE: ${lista[kojiKorisnik].godine}`)
+// ime starost i boja 
+
+
+class Zivotinje {
+  constructor(ime,starost,boja){
+    this.ime = ime,
+    this.starost = starost,
+    this.boja = boja
+  }
 }
+
+class Pas extends Zivotinje{
+  constructor(ime,starost,boja){
+    super(ime,starost,boja)
+  }
+  lajanje(){
+    console.log("afafaf")
+  }
+}
+const dog = new Pas("Leo",2, "crna")
+dog.lajanje()
+
+class Macka extends Zivotinje{
+  constructor(ime,starost,boja){
+    super(ime,starost,boja)
+  }
+  mjaukanje(){
+    console.log("mnjau")
+  }
+}
+const cat = new Macka("macka",2, "bela")
+cat.mjaukanje()
+
+class Faris extends Zivotinje{
+  constructor(ime,prezime,starost,oci,boja){
+    super(ime,starost,boja)
+    this.prezime = prezime,
+    this.oci = oci
+  }
+  info(){
+    console.log(this.ime,this.prezime,this.starost,this.oci,this.boja)
+  }
+}
+const fax = new Faris("Faka","Ne znam","16","crne","zuta")
+console.log(fax)
+fax.info()
