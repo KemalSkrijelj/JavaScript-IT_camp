@@ -662,3 +662,62 @@ class Faris extends Zivotinje{
 const fax = new Faris("Faka","Ne znam","16","crne","zuta")
 console.log(fax)
 fax.info()
+//////////////////////////////
+
+const arrNovi = [1,2,3,4,5,6,7,8,9]
+let sum2 = 0
+arrNovi.forEach((el) => sum2+=el)
+console.log(sum2)
+const knjige = [{ime:"knjig1",brojStr:200, tip:"roman"},{ime:"knj2",brojStr:220, tip:"istorija"}, {ime:"knj2",brojStr:120, tip:"roman"}]
+
+const sum = arrNovi.reduce((prevVal,currVal)=> {
+console.log(prevVal, "prevVal")
+return prevVal + currVal
+},0)
+
+
+const sumStr = knjige.reduce((prevVal,knjiga) => {
+if (knjiga.tip === "roman") {
+  return prevVal + knjiga.brojStr
+}else{
+  return prevVal
+}
+},0)
+
+console.log(sumStr)
+
+
+const kemal22 = {
+ imee:"kemal",
+ prezime:"skrijelj",
+ godine:18
+}
+
+const {imee, ...rest} = kemal22
+// kemal22.ime  ostatak  imeOBJ
+console.log(imee)
+console.log(rest)
+
+
+const terOper = 2 === 2 ? true : false
+//zamena za if()
+const jesamLiJaCovek = "covek" === "covek" ? "jesteCovek" : "nijeCovek"
+//ako je covek = covek onda je cl "jesteCovek",                      
+console.log(jesamLiJaCovek)
+//////////////////
+const vozila = [
+ {ime:"audi",godina:2016, konjaza:190, boja:"crna"},
+ {ime:"audi",godina:2019, konjaza:190, boja:"bela"},
+ {ime:"bmw",godina:2018, konjaza:110, boja:"crna"},
+ {ime:"bmw",godina:2018, konjaza:190, boja:"braon"},
+ {ime:"audi",godina:2016, konjaza:190, boja:"crna"}]
+
+const audi = vozila.reduce((prevVal,markaVozila)=>{
+  if (markaVozila.ime === "audi" && markaVozila.konjaza === 190) {
+    return prevVal + markaVozila.konjaza
+  }else{
+    return prevVal
+  }
+},0)
+
+console.log(audi)
