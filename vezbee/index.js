@@ -721,3 +721,64 @@ const audi = vozila.reduce((prevVal,markaVozila)=>{
 },0)
 
 console.log(audi)
+
+
+const arrObj = [{ime:'ime'},{ime:'ime2'}]
+arrObj.push({prezime:"prezime"})
+console.log(arrObj)
+
+
+const arrOfKeys = []
+const arrOfValue = []
+
+const test12 = {
+  ime:'test',
+  prezime:'test',
+  godine: 12,
+  lokacija:"1321"
+}
+Object.entries(test12).forEach((key) => {
+  arrOfKeys.push(key)
+})
+
+arrOfKeys.push(Object.keys(test12))
+arrOfValue.push(Object.values(test12))
+console.log(arrOfKeys)
+console.log(arrOfValue)
+
+//Promise
+console.log("Kemal ovo ono 1");
+
+setTimeout(()=>{
+    console.log("Kemal ovo ono 2");
+    setTimeout(()=>{
+        console.log("Kemal ovo ono 3");
+    },0)
+},5000)
+
+console.log("Kemal ovo no 4" + setTimeout(()=>{ //41
+    console.log("Keaml ovo no 5" + setTimeout(()=>{  // 52
+        console.log("Kemal ovo ono 6" + setTimeout(()=>{ //63
+            console.log("kemal ovo no 7" + setTimeout(()=>{},0)); //74
+        },0));
+    }));
+},3600));
+//Dodaje dodat broj po id-u
+
+setTimeout(()=>{
+console.log("Kemal ovo no 6");
+},0)
+
+//Output : 1 , 42 ,6, 54, 65 , 76 ,2, 3
+
+
+//Try, catch
+const kemalNew = 2
+// kemal = 2 - puknuce program
+
+try {
+  kemal = 2
+} catch (error) {
+  console.log(error)
+}
+console.log("jesi siguran?")
