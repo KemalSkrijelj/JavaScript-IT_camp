@@ -747,30 +747,45 @@ console.log(arrOfKeys)
 console.log(arrOfValue)
 
 //Promise
-console.log("Kemal ovo ono 1");
+// console.log("Kemal ovo ono 1");
 
-setTimeout(()=>{
-    console.log("Kemal ovo ono 2");
-    setTimeout(()=>{
-        console.log("Kemal ovo ono 3");
-    },0)
-},5000)
+// setTimeout(()=>{
+//     console.log("Kemal ovo ono 2");
+//     setTimeout(()=>{
+//         console.log("Kemal ovo ono 3");
+//     },0)
+// },5000)
 
-console.log("Kemal ovo no 4" + setTimeout(()=>{ //41
-    console.log("Keaml ovo no 5" + setTimeout(()=>{  // 52
-        console.log("Kemal ovo ono 6" + setTimeout(()=>{ //63
-            console.log("kemal ovo no 7" + setTimeout(()=>{},0)); //74
-        },0));
-    }));
-},3600));
-//Dodaje dodat broj po id-u
+// console.log("Kemal ovo no 4" + setTimeout(()=>{ //41
+//     console.log("Keaml ovo no 5" + setTimeout(()=>{  // 52
+//         console.log("Kemal ovo ono 6" + setTimeout(()=>{ //63
+//             console.log("kemal ovo no 7" + setTimeout(()=>{},0)); //74
+//         },0));
+//     }));
+// },3600));
+// //Dodaje dodat broj po id-u
 
-setTimeout(()=>{
-console.log("Kemal ovo no 6");
-},0)
+// setTimeout(()=>{
+// console.log("Kemal ovo no 6");
+// },0)
 
 //Output : 1 , 42 ,6, 54, 65 , 76 ,2, 3
 
+// let prviPromise = new Promise(function(myResolve, myReject) {
+//   let x = 0;
+
+
+//   if (x == 0) {
+//     myResolve("OK");
+//   } else {
+//     myReject("Error");
+//   }
+// });
+
+// prviPromise.then(
+//   function(value) {console.log(value);},
+//   function(error) {console.log(error);}
+// );
 
 //Try, catch
 const kemalNew = 2
@@ -782,3 +797,41 @@ try {
   console.log(error)
 }
 console.log("jesi siguran?")
+
+//  const obecanje = new Promise((res,rej)=>{
+//     setTimeout(()=>{
+//      const result = 0 == false ? true : false
+//      if(result){
+//          res("Uspesno izvresena funkcija")
+//      }
+//      else {
+//          rej("Neuspensa funcija")
+//      }
+//     },1000) 
+//  })
+
+//  obecanje.then((res)=>{
+//     console.log(res);
+// }).catch((err)=>{
+//     console.log(err);
+// }).finally(()=>{
+//     console.log("no me interese ja se izvrism");
+// })
+
+const podaci = [{ime: "Kemal", id:1},{ime: "Veljko", id:2},
+                {ime: "Nadia", id:3},{ime: "Sergej", id:4},
+                {ime: "Nerma", id:1},{ime: "Ahmed", id:6},
+                {ime: "Mervan", id:1},{ime: "Faris", id:8},
+                {ime: "Ahmed", id:1}]
+
+let brojStranica = Math.ceil(podaci.length/ 2)
+let promptPodaci;
+while (isNaN(promptPodaci)) {
+  promptPodaci = prompt(`Unesi broj stranice koju zelis da vidis, trenutno ima ${brojStranica} stranica`)  
+}
+
+for (let i = 0; i < brojStranica; i++) {     
+  if (promptPodaci === i) {
+    console.log()
+  }
+}
