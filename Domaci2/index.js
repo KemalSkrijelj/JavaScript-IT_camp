@@ -170,20 +170,84 @@
 // console.log(`{ime:${imeObject},prezime:${prezimeObject},godine:${godineObject}}`)
 //////////////////////
 
-today = new Date()
-past = new Date(2005,9,10) //Js racuna mesece od 0
+// today = new Date()
+// past = new Date(2005,9,10) //Js racuna mesece od 0
 
 
-function calcDate(date1,date2) {
-    const diff = Math.floor(date1.getTime() - date2.getTime());
-    const day = 1000 * 60 * 60 * 24;
+// function calcDate(date1,date2) {
+//     const diff = Math.floor(date1.getTime() - date2.getTime());
+//     const day = 1000 * 60 * 60 * 24;
 
-    const days = Math.floor(diff/day);
-    const months = Math.floor(days/31);
-    const years = Math.floor(months/12);
+//     const days = Math.floor(diff/day);
+//     const months = Math.floor(days/31);
+//     const years = Math.floor(months/12);
 
-    const message = `${years}years   ${months}months  ${days}days `
+//     const message = `${years}years   ${months}months  ${days}days `
 
-    return message
-    }
-console.log(calcDate(today,past)) 
+//     return message
+//     }
+// console.log(calcDate(today,past)) 
+
+
+
+///DOMACI
+// 1 zadatak => da vratite niz bez duplikata i da izracunate koji se koliko poanvlja 
+const podaci = [{ime:"Kemal",id:1},{ime:"Veljko",id:2},
+                {ime:"Nadia",id:3},{ime:"Sergej",id:4},
+                {ime:"Nerma",id:5},{ime:"Ahmed",id:6},
+                {ime:"Mervan",id:7},{ime:"Faris",id:8},
+                {ime:"Ahmed",id:9},{ime:"Kemal",id:1},{ime:"Veljko",id:2},
+                {ime:"Nadia",id:3},{ime:"Sergej",id:4},
+                {ime:"Nerma",id:5},{ime:"Ahmed",id:6},
+                {ime:"Mervan",id:7},{ime:"Faris",id:8},
+                {ime:"Ahmed",id:9},{ime:"Kemal",id:1},{ime:"Veljko",id:2},
+                {ime:"Nadia",id:3},{ime:"Sergej",id:4},
+                {ime:"Nerma",id:5},{ime:"Ahmed",id:6},
+                {ime:"Mervan",id:7},{ime:"Faris",id:8},
+                {ime:"Ahmed",id:9},{ime:"Kemal",id:1},{ime:"Veljko",id:2},
+                {ime:"Nadia",id:3},{ime:"Sergej",id:4},
+                {ime:"Nerma",id:5},{ime:"Ahmed",id:6},
+                {ime:"Mervan",id:7},{ime:"Faris",id:8},
+                {ime:"Ahmed",id:9},{ime:"Kemal",id:1},{ime:"Veljko",id:2},
+                {ime:"Nadia",id:3},{ime:"Sergej",id:4},
+                {ime:"Nerma",id:5},{ime:"Ahmed",id:6},
+                {ime:"Mervan",id:7},{ime:"Faris",id:8},
+                {ime:"Ahmed",id:9}]
+
+                const a = []
+                function removeDuplicate(podaci) {
+                    podaci.forEach((item) => {
+        const isDuplicate = a.some((value) => value.id === item.id)
+          if (!isDuplicate) {
+            a.push(item)
+          }
+        })
+      }
+removeDuplicate(podaci)
+console.log(a)
+
+// 2 zadatak => da vratite niz gde ime pocinje sa "Ah"
+
+let podaci2 = []
+for (let i = 0; i < podaci.length; i++) {
+  if (podaci[i].ime.includes("Ah")) {
+    podaci2.push(podaci[i])
+  }
+}
+console.log(podaci2)
+
+
+
+  //3 zadatak => ako se id ponavlja , setuj neki drugi id koji nije unutar niza
+
+// let podaci3 = []
+// function removeSameId(podaci) {
+//   podaci.forEach(item => {
+//     const isDuplicateId = podaci3.some(value => value.id === value.id)
+//     if (isDuplicateId) {
+//       item.id === Math.random()
+//     }
+//   })
+// }
+// removeSameId()
+// console.log(podaci3)
