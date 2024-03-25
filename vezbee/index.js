@@ -817,21 +817,26 @@ console.log("jesi siguran?")
 // }).finally(()=>{
 //     console.log("no me interese ja se izvrism");
 // })
+// setInterval(() => {
+//   console.log("eto me eto")
+// }, 1000);  //Push ovaj clg beskonacko puta svaku sekundu
 
-const podaci = [{ime: "Kemal", id:1},{ime: "Veljko", id:2},
-                {ime: "Nadia", id:3},{ime: "Sergej", id:4},
-                {ime: "Nerma", id:1},{ime: "Ahmed", id:6},
-                {ime: "Mervan", id:1},{ime: "Faris", id:8},
-                {ime: "Ahmed", id:1}]
+// const podaci = [{ime: "Kemal", id:1},{ime: "Veljko", id:2},
+//                 {ime: "Nadia", id:3},{ime: "Sergej", id:4},
+//                 {ime: "Nerma", id:1},{ime: "Ahmed", id:6},
+//                 {ime: "Mervan", id:1},{ime: "Faris", id:8},
+//                 {ime: "Ahmed", id:1}]
 
-let brojStranica = Math.ceil(podaci.length/ 2)
-let promptPodaci;
-while (isNaN(promptPodaci)) {
-  promptPodaci = prompt(`Unesi broj stranice koju zelis da vidis, trenutno ima ${brojStranica} stranica`)  
-}
+// let brojStranica = Math.ceil(podaci.length/ 2)
+// let promptPodaci;
+// while (isNaN(promptPodaci)) {
+//   promptPodaci = prompt(`Unesi broj stranice koju zelis da vidis, trenutno ima ${brojStranica} stranica`)  
+// }
+// console.log(podaci.slice(promptPodaci, Number(promptPodaci)+ 2))
 
-for (let i = 0; i < brojStranica; i++) {     
-  if (promptPodaci === i) {
-    console.log()
-  }
-}
+let lenghtOfUsers;
+fetch('https://65f1a999034bdbecc7634f68.mockapi.io/users/').then(res => res.json()).then(data => {
+  let userId = prompt(`Unesite od kojeg usera zelite info od 1 do ${data.length}`)
+  fetch(`https://65f1a999034bdbecc7634f68.mockapi.io/users/${userId}`).then(res => res.json()).then(data => 
+  console.log(data,"data of user number", data))
+})

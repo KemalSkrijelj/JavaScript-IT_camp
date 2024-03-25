@@ -213,7 +213,6 @@ const podaci = [{ime:"Kemal",id:1},{ime:"Veljko",id:2},
                 {ime:"Nerma",id:5},{ime:"Ahmed",id:6},
                 {ime:"Mervan",id:7},{ime:"Faris",id:8},
                 {ime:"Ahmed",id:9}]
-
                 const a = []
                 function removeDuplicate(podaci) {
                     podaci.forEach((item) => {
@@ -240,14 +239,15 @@ console.log(podaci2)
 
   //3 zadatak => ako se id ponavlja , setuj neki drugi id koji nije unutar niza
 
-// let podaci3 = []
-// function removeSameId(podaci) {
-//   podaci.forEach(item => {
-//     const isDuplicateId = podaci3.some(value => value.id === value.id)
-//     if (isDuplicateId) {
-//       item.id === Math.random()
-//     }
-//   })
-// }
-// removeSameId()
-// console.log(podaci3)
+let podaci3 = []
+
+
+
+for (let i = 0; i < podaci.length; i++) {
+  if (podaci[i].id === podaci[i].id) {
+    podaci3.push(podaci[i].id = Math.random())
+  }
+}
+
+
+console.log(podaci3)
