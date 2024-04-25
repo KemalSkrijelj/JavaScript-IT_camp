@@ -237,11 +237,9 @@ console.log(podaci2)
 
 
 
-  //3 zadatak => ako se id ponavlja , setuj neki drugi id koji nije unutar niza
+//3 zadatak => ako se id ponavlja , setuj neki drugi id koji nije unutar niza
 
 let podaci3 = []
-
-
 
 for (let i = 0; i < podaci.length; i++) {
   if (podaci[i].id === podaci[i].id) {
